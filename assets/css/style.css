@@ -1,0 +1,9 @@
+body {
+    background-image: url("../imaages/booksBackground.jpg");
+    background-size: cover;
+    
+}
+
+img {
+    width: 100%;
+}
