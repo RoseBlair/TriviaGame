@@ -1,9 +1,23 @@
 body {
-    background-image: url("../imaages/booksBackground.jpg");
+    background-image: url("../images/booksBackground.jpg");
     background-size: cover;
     
 }
 
 img {
     width: 100%;
+}
+
+#wrapper {
+    background-color: whitesmoke;
+    width: 60%;
+    padding: 10%;
+}
+
+button,
+h1,
+h2, 
+h3 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.5em;
 }
