@@ -50,24 +50,18 @@ $("#done").click(function() {
 
 var correctAnswer = 0;
 
-//the correctAnswer variable is somehow responsive to the correctAnswer HTML class. 
-
-var correctAnswer = document.getElementByClass(".correctAnswer");
-
 //incorrect answer element has a counter of zero.
 
 var incorrectAnswer = 0;
 
-//the incorrect answers variable somehow collects infortion on the incorrect answers in the HTML.
-
-var incorrectAnswer = document.getElementByClass("incorrectAnswer");
+//create a variable to contain the number of unanswered questions.
 
 var unanswered = 0;
 
 //For every correctAnswer radio button that's checked, the score is increased by one. 
 // Calculate the incorrect answers. 
 
-if (correctAnswer.checked() = true) {
+if (".correctAnswer").prop("checked", true) {
         score++;
     }
 
@@ -75,12 +69,12 @@ if (correctAnswer.checked() = true) {
 //incorrectAnswers is returned.
 
 
-else if (incorrectAnswer.checked() = true) {
+elseif ("incorrectAnswer").prop ("checked", true) {
     incorrectAnswer++;
-}
+};
 
-//unanswered answers are calculated by subtracting the correct answers and incorrect answers from the total number
-//of questions, which is 4. 
+// The number of correct and incorrect answers are subtracted from the total number of questions, 4.
+//This leaves us with the number of unanswered questions.
 
 unanswered = (4-(correctAnswer + incorrectAnwer));
 
