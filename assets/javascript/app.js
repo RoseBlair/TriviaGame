@@ -9,7 +9,7 @@ $(".questions").hide();
 
 var score= 0;
 var counter = 10;
-
+var intervalId;
 
 
 //Function that counts down the seconds and displays the counter in HTML.
@@ -17,29 +17,33 @@ var counter = 10;
 function counterFunction() {
     counter = counter-1;
     $("#timer").text(counter);
-    return counter;
 };
 
 //When "start" is clicked, the counter counts down.
 
  
-$("#start").on("click", setInterval(counterFunction, 1000));
-$("#start").on("click", $(".questions").show());
+$("#start").on("click", function() {
+   intervalId = setInterval(counterFunction, 1000);
+   $(".questions").show();
+   $("#start").hide();
+});
+
 
 
 //if the counter has hit zero, the inverval is cleared, meaning the counter vanishes. The questions disappear.
 
-if (counter = 0) {
-    clearInterval(counter); 
+if (counter === 0) {
+    clearInterval(intervalId); 
     $(".questions").hide();
     //show final tally
     ("#finalTally").show();
 }
 
-// if the user hits the "done" button, the questions are supposed to hide and the counter is supposed to stop. 
+// if the user hits the "done" button, the questions are supposed to hide and the intervalId is supposed to stop. 
 
 $("#done").click(function() {
-    clearInterval(counter);
+    console.log("inside Done");
+    clearInterval(intervalId);
     $(".questions").hide();
     //show final tally
     ("#finalTally").show();
@@ -61,7 +65,7 @@ var unanswered = 0;
 //For every correctAnswer radio button that's checked, the score is increased by one. 
 // Calculate the incorrect answers. 
 
-if (".correctAnswer").prop("checked", true) {
+if ((".correctAnswer").prop("checked", true)) {
         score++;
     }
 
@@ -69,7 +73,7 @@ if (".correctAnswer").prop("checked", true) {
 //incorrectAnswers is returned.
 
 
-elseif ("incorrectAnswer").prop ("checked", true) {
+else if (("incorrectAnswer").prop ("checked", true)) {
     incorrectAnswer++;
 };
 
