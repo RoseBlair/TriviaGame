@@ -24,7 +24,7 @@ function counterFunction() {
 
  
 $("#start").on("click", setInterval(counterFunction, 1000));
-$("#start").on("click", function() (".questions").show());
+$("#start").on("click", $(".questions").show());
 
 
 //if the counter has hit zero, the inverval is cleared, meaning the counter vanishes. The questions disappear.
@@ -76,15 +76,13 @@ if (correctAnswer.checked() = true) {
 
 
 else if (incorrectAnswer.checked() = true) {
-    incorrectAnswers++;
+    incorrectAnswer++;
 }
 
 //unanswered answers are calculated by subtracting the correct answers and incorrect answers from the total number
 //of questions, which is 4. 
 
-else {
-    unanswered = (4-(correctAnswer + incorrectAnwer));
-};
+unanswered = (4-(correctAnswer + incorrectAnwer));
 
 //print out this part of the document that shows the users the correct answers, incorrect answers, and score.
 
