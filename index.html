@@ -16,35 +16,35 @@
     <button id="start">Start</button><br>
 
     <span id="count">Time Remaining: </span>
-    <div id="timer"></div>
+    <span id="timer"></span>
 </div>
 
 <div class="questions">
     <h2>Which book features a generation adrift after WWI (and bullfighting)?</h2>
     <form>
         <input type="radio" class="button" name="generationAdrift" class="correctAnswer" value="A Farewell to Arms"><label for ="A Farewell to Arms">A Farewell to Arms</label>
-        <input type="radio" class="button" name="generationAdrift" value="The Grapes of Wrath"><label for ="The Grapes of Wrath">The Grapes of Wrath</label>
-        <input type="radio" class="button" name="generationAdrift" value="All Quiet on the Western Front"><label for ="All Quiet on the Western Front">All Quiet on the Western Front</label>
-        <input type="radio" class="button" name="generationAdrift" value="The Man with Two Left Feet"><label for ="The Man with Two Left Feet">The Man with Two Left Feet</label>
+        <input type="radio" class="button" name="generationAdrift" class="incorrectAnswer" value="The Grapes of Wrath"><label for ="The Grapes of Wrath">The Grapes of Wrath</label>
+        <input type="radio" class="button" name="generationAdrift" class="incorrectAnswer" value="All Quiet on the Western Front"><label for ="All Quiet on the Western Front">All Quiet on the Western Front</label>
+        <input type="radio" class="button" name="generationAdrift" class="incorrectAnswer" value="The Man with Two Left Feet"><label for ="The Man with Two Left Feet">The Man with Two Left Feet</label>
     </form>
 </div>
 
 <div class="questions">
     <h2 >Heathcliff and Catherine are the tempestuous love interests in this gothic novel, which takes place on the Yorkshire moors:</h2>
     <form>
-        <input type="radio" class="button" name="Yorkshire" value="The Tell-Tale Heart"><label for ="The Tell-Tale Heart">The Tell-Tale Heart</label>
-        <input type="radio" class="button" name="Yorkshire" value="Jane Eyre"><label for ="Jane Eyre">Jane Eyre</label>
+        <input type="radio" class="button" name="Yorkshire" class="incorrectAnswer"value="The Tell-Tale Heart"><label for ="The Tell-Tale Heart">The Tell-Tale Heart</label>
+        <input type="radio" class="button" name="Yorkshire" class="incorrectAnswer" value="Jane Eyre"><label for ="Jane Eyre">Jane Eyre</label>
         <input type="radio" class="button" name="Yorkshire" class="correctAnswer" value="Wuthering Heights"><label for ="Wuthering Heights">Wuthering Heights</label>
-        <input type="radio" class="button" name="Yorkshire" value="Pride and Prejudice"><label for ="Pride and Prejudice">Pride and Prejudice</label>
+        <input type="radio" class="button" name="Yorkshire" class="incorrectAnswer" value="Pride and Prejudice"><label for ="Pride and Prejudice">Pride and Prejudice</label>
     </form>
 </div>
 
 <div class="questions">
         <h2>Which book has the ever-resourceful butler Jeeves as a supporting character?</h2>
         <form>
-            <input type="radio" class="button" name="Jeeves" value="The Great Gatsby"><label for ="The Great Gatsby">The Great Gatsby</label>
-            <input type="radio" class="button" name="Jeeves" value="Brideshead Revisited"><label for ="Brideshead Revisited">Brideshead Revisited</label>
-            <input type="radio" class="button" name="Jeeves" value="A Confederacy of Dunces"><label for ="A Confederacy of Dunces">A Confederacy of Dunces</label>
+            <input type="radio" class="button" name="Jeeves" class="incorrectAnswer" value="The Great Gatsby"><label for ="The Great Gatsby">The Great Gatsby</label>
+            <input type="radio" class="button" name="Jeeves" class="incorrectAnswer" value="Brideshead Revisited"><label for ="Brideshead Revisited">Brideshead Revisited</label>
+            <input type="radio" class="button" name="Jeeves" class="incorrectAnswer" value="A Confederacy of Dunces"><label for ="A Confederacy of Dunces">A Confederacy of Dunces</label>
             <input type="radio" class="button" name="Jeeves" class="correctAnswer" value="The Code of the Woosters"><label for ="The Code of the Woosters">The Code of the Woosters</label>
         </form>
     </div>
@@ -52,10 +52,10 @@
     <div class="questions" id="lastQuestion">
             <h2>You’re caught on a desert island. Which book do you turn to for advice on how to build a spiral staircase inside of a tree?</h2>
             <form>
-                <input type="radio" class="button" name="island" value="The Three Musketeers"><label for = "The Three Musketeers">The Three Musketeers</label>
-                <input type="radio" class="button" name="island" value="Treasure Island"><label for = "Treasure Island">Treasure Island</label>
+                <input type="radio" class="button" name="island" class="incorrectAnswer" value="The Three Musketeers"><label for = "The Three Musketeers">The Three Musketeers</label>
+                <input type="radio" class="button" name="island" class="incorrectAnswer" value="Treasure Island"><label for = "Treasure Island">Treasure Island</label>
                 <input type="radio" class="button" name="island" class="correctAnswer" value="The Swiss Family Robinson"><label for = "The Swiss Family Robinson">The Swiss Family Robinson</label>
-                <input type="radio" class="button" name="island" value="The DaVinci Code "><label for = "The DaVinci Code">The DaVinci Code</label> 
+                <input type="radio" class="button" name="island" class="incorrectAnswer"value="The DaVinci Code "><label for = "The DaVinci Code">The DaVinci Code</label> 
             </form>
         </div>
 
@@ -63,10 +63,14 @@
     <div>
         <span><button id="done">Done</button></span>
     </div>
-    
+
     
     
 
+</div>
+
+<div id="finalTally">
+    
 </div>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>    
     <script src="assets/javascript/app.js"></script>

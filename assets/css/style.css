@@ -74,6 +74,9 @@ span {
 #count, 
 #time {
     margin: 0 auto;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.5em;
+    line-height: 1.53em;
 }
 
 #banner,
