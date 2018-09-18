@@ -1,4 +1,3 @@
-
 $(document).ready(function() {
 
    
@@ -76,17 +75,16 @@ else if (incorrectAnswer.checked() = true) {
 //unanswered answers are calculated by subtracting the correct answers and incorrect answers from the total number
 //of questions, which is 4. 
 
-else () {
+else {
     unanswered = (4-(correctAnswer + incorrectAnwer));
     return unanswered;
 };
 
 
+//print out this part of the document that shows the users the correct answers, incorrect answers, and score.
+
+$("#finalTally").text("Correct answers: " + score + "Incorrect answers :" + incorrectAnswers + "Unanswered: " + unanswered)
     
    
-
-    
-
-
 
 });
