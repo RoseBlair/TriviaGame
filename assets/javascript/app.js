@@ -1,5 +1,9 @@
 $(document).ready(function() {
 
+
+$("#finalTally").hide();
+$(".questions").hide();
+    
    
 //two variables, one for keeping score and the other for counting down time.
 
@@ -20,6 +24,7 @@ function counterFunction() {
 
  
 $("#start").on("click", setInterval(counterFunction, 1000));
+$("#start").on("click", function() (".questions").show());
 
 
 //if the counter has hit zero, the inverval is cleared, meaning the counter vanishes. The questions disappear.
@@ -27,6 +32,8 @@ $("#start").on("click", setInterval(counterFunction, 1000));
 if (counter = 0) {
     clearInterval(counter); 
     $(".questions").hide();
+    //show final tally
+    ("#finalTally").show();
 }
 
 // if the user hits the "done" button, the questions are supposed to hide and the counter is supposed to stop. 
@@ -34,6 +41,8 @@ if (counter = 0) {
 $("#done").click(function() {
     clearInterval(counter);
     $(".questions").hide();
+    //show final tally
+    ("#finalTally").show();
 });
 
 
@@ -60,7 +69,6 @@ var unanswered = 0;
 
 if (correctAnswer.checked() = true) {
         score++;
-        return score;
     }
 
 //the number of incorrect answers are checked and added to the variable incorrectAnswers.
@@ -69,7 +77,6 @@ if (correctAnswer.checked() = true) {
 
 else if (incorrectAnswer.checked() = true) {
     incorrectAnswers++;
-    return incorrectAnswers;
 }
 
 //unanswered answers are calculated by subtracting the correct answers and incorrect answers from the total number
@@ -77,9 +84,7 @@ else if (incorrectAnswer.checked() = true) {
 
 else {
     unanswered = (4-(correctAnswer + incorrectAnwer));
-    return unanswered;
 };
-
 
 //print out this part of the document that shows the users the correct answers, incorrect answers, and score.
 
