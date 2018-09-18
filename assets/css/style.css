@@ -12,12 +12,72 @@ img {
     background-color: whitesmoke;
     width: 60%;
     padding: 10%;
+    margin: 0 auto;
+    position: relative;
+    
 }
 
-button,
+button {
+        margin: 0 auto;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 1.5em;
+        line-height: 1.53em;
+        
+
+}
+
+
 h1,
 h2, 
 h3 {
     font-family: 'Times New Roman', Times, serif;
     font-size: 1.5em;
+    line-height: 1.53em;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+div {
+    padding: 3%;
+}
+
+#title {
+    text-align: center;
+}
+
+#count {
+    text-align: center;
+}
+
+#start {
+    width: 600px;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0 auto;
+    text-align: center;
+    background-color: olive;
+}
+
+#done {
+    font-family: 'Times New Roman', Times, serif;
+    width: 700px;
+    background-color: olive;
+}
+
+#lastQuestion {
+    margin-bottom: 40px;
+}
+
+span {
+    margin: 0 auto;
+}
+
+#count, 
+#time {
+    margin: 0 auto;
+}
+
+#banner,
+.questions {
+    margin: auto 0;
+    text-align: center;
 }
