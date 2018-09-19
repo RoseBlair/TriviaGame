@@ -1,8 +1,16 @@
+
+
+//I was unable to get the timer to stop running into negative numbers.
+//I was also unable to reveal the final tally at the end.
+
+
 $(document).ready(function() {
 
 
 $("#finalTally").hide();
 $(".questions").hide();
+$("#done").hide();
+
     
    
 //two variables, one for keeping score and the other for counting down time.
@@ -26,6 +34,7 @@ $("#start").on("click", function() {
    intervalId = setInterval(counterFunction, 1000);
    $(".questions").show();
    $("#start").hide();
+   $("#done").show();
 });
 
 
@@ -46,7 +55,7 @@ $("#done").click(function() {
     clearInterval(intervalId);
     $(".questions").hide();
     //show final tally
-    ("#finalTally").show();
+    $("#finalTally").show();
 });
 
 
@@ -62,30 +71,34 @@ var incorrectAnswer = 0;
 
 var unanswered = 0;
 
-//For every correctAnswer radio button that's checked, the score is increased by one. 
-// Calculate the incorrect answers. 
+//equation that makes the value of clicked item equal to the value defined in HTML.
 
-if ((".correctAnswer").prop("checked", true)) {
-        score++;
-    }
+$.each($("input[name='question0']:checked"), function () {
+    var valOfClickedItem = $(this).val();
 
 //the number of incorrect answers are checked and added to the variable incorrectAnswers.
-//incorrectAnswers is returned.
 
+if (valOfClickedItem === false) {
+    incorrectAnswer = incorrectAnswer + 1;
+}
 
-else if (("incorrectAnswer").prop ("checked", true)) {
-    incorrectAnswer++;
-};
+//For every correctAnswer radio button that's checked, the score is increased by one. 
+
+if (valOfClickedItem === true) {
+    correctAnswer = correctAnswer + 1;
+}
+
 
 // The number of correct and incorrect answers are subtracted from the total number of questions, 4.
 //This leaves us with the number of unanswered questions.
 
-unanswered = (4-(correctAnswer + incorrectAnwer));
+unanswered = (4-(correctAnswer + incorrectAsnwer));
 
 //print out this part of the document that shows the users the correct answers, incorrect answers, and score.
+ 
+$("#finalTally").text("Correct answers: " + score + "Incorrect answers :" + incorrectAnswers + "Unanswered: " + unanswered);
 
-$("#finalTally").text("Correct answers: " + score + "Incorrect answers :" + incorrectAnswers + "Unanswered: " + unanswered)
-    
-   
+});
+
 
 });
