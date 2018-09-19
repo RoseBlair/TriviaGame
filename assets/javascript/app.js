@@ -16,7 +16,7 @@ $("#done").hide();
 //two variables, one for keeping score and the other for counting down time.
 
 var score= 0;
-var counter = 10;
+var counter = 160;
 var intervalId;
 
 
